@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Button } from '@nextui-org/react'
  
  
-export default function NotFound() {
+export default function GlobalNotFound() {
   return (
     <main className="h-[80vh] flex flex-col align-middle justify-center gap-3 p-3">
       <h1 className='font-bold text-center'>Not Found!</h1>
