@@ -20,7 +20,14 @@ export const metadata: Metadata = {
 };
 
 
-export default function AppConfigLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export const dynamicParams = true
+
+export async function generateStaticParams() {
+	return [{ app: 'me' }, { app: 'you' }, { app: 'us' }]
+}
+
+// { params }: { params: { app: string } }
+export default function AppConfigLayout({ children, params }: Readonly<{ children: React.ReactNode, params: { app: string } }>) {
 	return (
 		<>
 			{children}
