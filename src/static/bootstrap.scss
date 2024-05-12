@@ -3,15 +3,15 @@
 @include bsBanner("");
 
 
-@import "./scss/functions";
+@import "~bootstrap/scss/functions";
 @import "./scss/variables";
 @import "./scss/variables-dark";
-@import "./scss/maps";
-@import "./scss/mixins";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
 
 @import "./scss/theme";
 
-@import "./scss/utilities";
+@import "~bootstrap/scss/utilities";
 
 
 @import "./scss/root";

@@ -8,7 +8,7 @@ export default function LandingPage() {
 	return (
 		<>
 			<section className="w-5/6 md:w-2/3 xl:w-3/5 mx-auto text-center flex flex-col items-center gap-3 py-12 lg:py-24 px-3">
-				<h1 className="font-semibold font-mono text-2xl md:text-4xl xl:text-6xl ">
+				<h1 className="font-semibold font-mono text-2xl md:text-4xl xl:text-6xl py-3">
 					The Developers <span className="text-sky-600">Space</span>
 				</h1>
 				<h6 className="font-medium md:text-md xl:text-xl">
