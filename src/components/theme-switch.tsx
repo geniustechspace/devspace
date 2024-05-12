@@ -22,3 +22,20 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = () => {
 		</div>
 	)
 };
+
+
+export const SingleThemeSwitch: FC<ThemeSwitchProps> = () => {
+	const { theme, setTheme } = useTheme();
+	const isSSR = useIsSSR();
+
+	const title = `Switch to ${theme === "light" || isSSR ? "dark" : "light"} mode`
+
+	return (
+		<div className="flex justify-between" title={title} aria-label={title} >
+			{theme === "light" ? 
+				<MdBedtime size={22} onClick={() => setTheme("dark")} className="cursor-pointer" />:
+				<MdLightMode size={22} onClick={() => setTheme("light")} className="cursor-pointer" /> 
+			}
+		</div>
+	)
+};

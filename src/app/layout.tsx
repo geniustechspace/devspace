@@ -25,7 +25,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
 				</Providers>
 
 				<footer className="card border-none p-3">
-					<div className="max-w-screen-2xl mx-auto flex flex-wrap justify-center gap-6 text-small">
+					<div className="max-w-screen-2xl mx-auto flex flex-wrap justify-center gap-x-6 gap-y-2 text-small">
 						{siteFooter.map((item) => (
 							<Link target="blank" key={item.href}
 								className="flex flex-wrap items-center gap-1 text-current hover:text-sky-600 hover:underline underline-offset-2"
