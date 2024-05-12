@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import {nextui} from "@nextui-org/react";
+import { nextui } from "@nextui-org/react";
 
 const config: Config = {
   content: [
@@ -14,6 +14,10 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      colors: {
+        border: '#7dd3fc',
+        primary: '#0284c7',
       },
     },
   },

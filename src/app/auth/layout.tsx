@@ -1,8 +1,12 @@
 
 import { Metadata } from "next";
 import Link from "next/link";
+import { Inter } from "next/font/google";
 import { siteConfig } from "@/config/site";
-import { Navbar } from "@/components/navbar";
+import { fontSans } from "@/config/fonts";
+import { Providers } from "../providers";
+import clsx from "clsx";
+import { Navbar } from "./navbar";
 
 
 export const metadata: Metadata = {
@@ -25,13 +29,10 @@ export default function LandingPageLayout({ children, }: Readonly<{ children: Re
 	return (
 		<>
 			<Navbar isLoggedIn />
+			{children}
 
-			<section className="max-w-screen-2xl mx-auto flex flex-col gap-4 px-3 md:px-5 py-2 md:py-3">
-				{children}
-			</section>
-
-			<footer className="card border-l-0 border-r-0 px-3 py-3 drop-shadow-none">
-				<div className="min-w-screen-2xl mx-auto flex flex-wrap justify-center gap-3">
+			<footer className="card rounded-none border-none px-3 py-3">
+				<div className="container mx-auto flex flex-wrap justify-between gap-3">
 					<Link target="blank"
 						className="flex flex-wrap items-center gap-1 text-current"
 						href="/"

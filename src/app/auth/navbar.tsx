@@ -48,7 +48,7 @@ export const Navbar = ({ isLoggedIn }: NavbarProps) => {
 	const pathname = usePathname();
 
 	return (
-		<NextUINavbar isBordered shouldHideOnScroll maxWidth="2xl" className="border-b-1 border-sky-200 dark:border-default shadow-md shadow-sky-100 dark:shadow-none">
+		<NextUINavbar isBordered shouldHideOnScroll maxWidth="2xl">
 			<NavbarContent className="flex gap-1">
 				<Dropdown placement="bottom-start" offset={20} crossOffset={-20} showArrow radius="sm" shadow="md"
 					onOpenChange={setIsMenuOpen} isOpen={isMenuOpen} classNames={{ trigger: "md:hidden" }}>
@@ -99,9 +99,9 @@ export const Navbar = ({ isLoggedIn }: NavbarProps) => {
 						<NavbarItem key={item.href}>
 							<NextLink
 								className={clsx(
-									"hover:shadow-sky-400 dark:hover:shadow-slate-500 rounded px-2 py-1 shadow-sm",
+									"hover:shadow-blue-400 dark:hover:shadow-slate-500 rounded px-2 py-1 shadow-sm",
 									{
-										["shadow-sky-400 dark:shadow-slate-500"]: item.href === pathname,
+										["shadow-blue-400 dark:shadow-slate-500"]: item.href === pathname,
 									}
 								)}
 								color="foreground"

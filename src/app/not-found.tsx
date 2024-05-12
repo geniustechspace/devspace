@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { Button } from '@nextui-org/react'
+import { internalUrls } from '@/config/site'
  
  
 export default function GlobalNotFound() {
@@ -11,7 +12,7 @@ export default function GlobalNotFound() {
       <p className='text-center'>Could not find requested resource</p>
       
       <div className='text-center'>
-        <Button href="/home" as={Link} color="primary" variant="shadow">
+        <Button href={internalUrls.home} as={Link} color="primary" variant="shadow">
           Return Home
         </Button>
       </div>

@@ -29,8 +29,14 @@ export async function generateStaticParams() {
 // { params }: { params: { app: string } }
 export default function AppConfigLayout({ children, params }: Readonly<{ children: React.ReactNode, params: { app: string } }>) {
 	return (
-		<>
-			{children}
-		</>
+		<section className="flex flex-row gap-5 px-3 lg:px-5">
+			<aside className="card border rounded px-3 lg:px-5">
+				sidenav
+			</aside>
+
+			<section className="card">
+				{children}
+			</section>
+		</section>
 	);
 }
