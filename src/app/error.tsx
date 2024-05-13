@@ -1,5 +1,8 @@
 'use client' 
  
+import { internalUrls } from '@/config/site'
+import { Button } from '@nextui-org/react'
+import Link from 'next/link'
 import { useEffect } from 'react'
  
 export default function GlobalError({
@@ -15,16 +18,13 @@ export default function GlobalError({
   }, [error])
  
   return (     
-    <main className="container mx-auto h-screen flex justify-center align-middle py-5">
+    <main className="h-[80vh] flex flex-col align-middle justify-center gap-3 p-3">
       <h2 className='font-mono font-semibold text-warning-foreground'>Something went wrong!</h2>
-      <button className='bg-success-50 rounded-md'
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
-      >
-      Try again
-      </button>
+      <div className='text-center'>
+        <Button href={internalUrls.home} as={Link} color="primary" variant="shadow">
+          Refresh the page
+        </Button>
+      </div>
     </main>
   )
 }

@@ -26,9 +26,7 @@ export default function LandingPageLayout({ children, }: Readonly<{ children: Re
 		<>
 			<Navbar isLoggedIn />
 
-			<section className="max-w-screen-2xl mx-auto flex flex-col gap-4 px-3 md:px-5 py-2 md:py-3">
-				{children}
-			</section>
+			{children}
 
 			<footer className="card border-l-0 border-r-0 px-3 py-3 drop-shadow-none">
 				<div className="min-w-screen-2xl mx-auto flex flex-wrap justify-center gap-3">
