@@ -77,8 +77,8 @@ jobs:
         env:
           BASE_PATH: /devspace
         run: |
-          echo "" > .env.local
-          echo BASE_PATH=$BASE_PATH >> .env.local
+          echo "" > .env
+          echo BASE_PATH=$BASE_PATH >> .env
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
