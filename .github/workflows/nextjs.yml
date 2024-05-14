@@ -76,6 +76,7 @@ jobs:
       - name: Set Environment Variables
         env:
           BASE_PATH: "/devspace"
+          ASSET_PREFIX: "/devspace"
         run: |
           echo "" > .env
           echo BASE_PATH=$BASE_PATH >> .env
